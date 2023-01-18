@@ -62,6 +62,8 @@ speller:
 
 translator:
   dictionary: luna_pinyin
+  user_dict: custom_phrase
+  enable_user_dict: true
   prism: combo_pinyin
   preedit_format:
     - xform/([nl])v/$1ü/
@@ -74,16 +76,16 @@ punctuator:
 
 key_binder:
   import_preset: default
+  
 
-recognizer:
-  import_preset: default
+
 
 __patch:
   # 默認七指禪（大衆式）
-  - combo_pinyin_layouts:/use_gia_layout
+  # - combo_pinyin_layouts:/use_gia_layout
   # 解封下列代碼，選用其他佈局選項
   # 八指禪，默認字母A = h
-  # - combo_pinyin_layouts:/use_zhia_layout
+  - combo_pinyin_layouts:/use_zhia_layout
   # 八指禪：選定左手拇指 h 鍵
   # - combo_pinyin_layouts:/use_semicolon
   # - combo_pinyin_layouts:/use_apostrophe
