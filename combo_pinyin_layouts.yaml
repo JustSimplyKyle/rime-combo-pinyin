@@ -229,6 +229,7 @@ zhia_layout_options:
   algebra:
     # 若 Control/Alt/Shift 鍵參與並擊，須改以單個字符表示按鍵
     - 'xform/\{Control_L\}/:/'
+    - 'xform/\{Help\}/:/'
     - 'xform/\{Alt_L\}/:/'
     - 'xform/\{Shift_L\}/+/'
     # 將物理按鍵字符對應到宮保拼音鍵位中的拼音字母
@@ -582,7 +583,7 @@ use_gya_layout:
 
 use_semicolon:
   chord_composer/+:
-    alphabet: 'gtbfrvdecswxaqz;hynjum ki,lo.p'
+    alphabet: 'gtbfrvdecswxaqz{Help}hynjum ki,lo.p'
 
 use_apostrophe:
   chord_composer/+:
@@ -597,6 +598,10 @@ use_alt:
   chord_composer/+:
     alphabet: 'gtbfrvdecswxaqz{Alt_L}hynjum ki,lo.p'
     use_alt: true
+
+use_grave:
+  chord_composer/+:
+    alphabet: 'gtbfrvdecswxaqz{Help}hynjum ki,lo.p'
 
 use_shift:
   chord_composer/+:

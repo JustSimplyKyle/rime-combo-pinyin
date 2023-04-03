@@ -45,6 +45,7 @@ engine:
   filters:
     - simplifier
     - uniquifier
+    - cjk_minifier
 
 chord_composer:
 
@@ -63,7 +64,12 @@ speller:
 translator:
   dictionary: luna_pinyin
   user_dict: custom_phrase
+  db_class: tabledb
   enable_user_dict: true
+  enable_charset_filter: true
+  enable_sentence: true
+  enable_encoder: true
+  spelling_hints: true
   prism: combo_pinyin
   preedit_format:
     - xform/([nl])v/$1ü/
@@ -86,8 +92,9 @@ __patch:
   # 解封下列代碼，選用其他佈局選項
   # 八指禪，默認字母A = h
   - combo_pinyin_layouts:/use_zhia_layout
+  # - combo_pinyin_layouts:/use_grave
   # 八指禪：選定左手拇指 h 鍵
-  # - combo_pinyin_layouts:/use_semicolon
+  - combo_pinyin_layouts:/use_semicolon
   # - combo_pinyin_layouts:/use_apostrophe
   # - combo_pinyin_layouts:/use_control
   # - combo_pinyin_layouts:/use_alt
